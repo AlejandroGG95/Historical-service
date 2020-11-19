@@ -32,6 +32,6 @@ steps:
     TargetFolder: '$(Build.ArtifactStagingDirectory)/historical-front/'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'dist'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/historical-front/dist'
     ArtifactName: 'drop'
     publishLocation: 'Container'
