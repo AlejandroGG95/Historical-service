@@ -28,10 +28,10 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/historical-back/dist'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/historical-back/dist'
+    SourceFolder: '$(Build.SourcesDirectory)/historical-front/'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/historical-front/'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/historical-back/dist'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/historical-front/'
     ArtifactName: 'drop'
     publishLocation: 'Container'
